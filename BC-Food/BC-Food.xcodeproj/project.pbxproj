@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		14232A461BE6533A00E4770B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232A451BE6533A00E4770B /* AppDelegate.swift */; };
-		14232A481BE6533A00E4770B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232A471BE6533A00E4770B /* ViewController.swift */; };
+		14232A481BE6533A00E4770B /* FUDlogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232A471BE6533A00E4770B /* FUDlogin.swift */; };
 		14232A4B1BE6533A00E4770B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14232A491BE6533A00E4770B /* Main.storyboard */; };
 		14232A4D1BE6533A00E4770B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14232A4C1BE6533A00E4770B /* Assets.xcassets */; };
 		14232A501BE6533A00E4770B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14232A4E1BE6533A00E4770B /* LaunchScreen.storyboard */; };
+		687EE82B1BE6A1E2005BC319 /* FUDhomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687EE82A1BE6A1E2005BC319 /* FUDhomePage.swift */; };
+		687EE82D1BE6A231005BC319 /* FUDdiningHallHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687EE82C1BE6A231005BC319 /* FUDdiningHallHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14232A421BE6533A00E4770B /* BC-Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BC-Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14232A451BE6533A00E4770B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14232A471BE6533A00E4770B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14232A471BE6533A00E4770B /* FUDlogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUDlogin.swift; sourceTree = "<group>"; };
 		14232A4A1BE6533A00E4770B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14232A4C1BE6533A00E4770B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14232A4F1BE6533A00E4770B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14232A511BE6533A00E4770B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		687EE82A1BE6A1E2005BC319 /* FUDhomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUDhomePage.swift; sourceTree = "<group>"; };
+		687EE82C1BE6A231005BC319 /* FUDdiningHallHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUDdiningHallHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				14232A451BE6533A00E4770B /* AppDelegate.swift */,
-				14232A471BE6533A00E4770B /* ViewController.swift */,
+				14232A471BE6533A00E4770B /* FUDlogin.swift */,
+				687EE82A1BE6A1E2005BC319 /* FUDhomePage.swift */,
 				14232A491BE6533A00E4770B /* Main.storyboard */,
+				687EE82C1BE6A231005BC319 /* FUDdiningHallHome.swift */,
 				14232A4C1BE6533A00E4770B /* Assets.xcassets */,
 				14232A4E1BE6533A00E4770B /* LaunchScreen.storyboard */,
 				14232A511BE6533A00E4770B /* Info.plist */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14232A481BE6533A00E4770B /* ViewController.swift in Sources */,
+				687EE82D1BE6A231005BC319 /* FUDdiningHallHome.swift in Sources */,
+				14232A481BE6533A00E4770B /* FUDlogin.swift in Sources */,
+				687EE82B1BE6A1E2005BC319 /* FUDhomePage.swift in Sources */,
 				14232A461BE6533A00E4770B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +296,7 @@
 				14232A561BE6533A00E4770B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
