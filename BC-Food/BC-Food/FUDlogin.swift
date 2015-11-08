@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FUDlogin.swift
 //  BC-Food
 //
 //  Created by Patrick W. Crawford on 11/1/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FUDlogin: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

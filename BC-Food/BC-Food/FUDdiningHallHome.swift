@@ -9,9 +9,15 @@
 import UIKit
 
 class FUDdiningHallHome: UIViewController {
+    
+    var incomingText = "temp"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("it works")
+        print(self.incomingText)
 
         // Do any additional setup after loading the view.
     }
