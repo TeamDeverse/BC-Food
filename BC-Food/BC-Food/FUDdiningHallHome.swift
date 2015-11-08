@@ -1,5 +1,5 @@
 //
-//  FUDhomePage.swift
+//  FUDdiningHallHome.swift
 //  BC-Food
 //
 //  Created by William Babis on 11/1/15.
@@ -8,11 +8,16 @@
 
 import UIKit
 
-class FUDhomePage: UIViewController {
+class FUDdiningHallHome: UIViewController {
+    
+    var incomingText = "temp"
+    
 
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
-        print("here")
+        
+        print("it works")
+        print(self.incomingText)
 
         // Do any additional setup after loading the view.
     }
@@ -21,21 +26,6 @@ class FUDhomePage: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func MacSegue(sender: AnyObject) {
-        performSegueWithIdentifier("general", sender: nil)
-        print("Mac general segue works!!")
-        
-    }
-    
-    @IBAction func EagleSegue(sender: AnyObject) {
-        performSegueWithIdentifier("general", sender: nil)
-        print("Eagle's general segue works!!")    }
-
-    
-   
-                    
-        
     
 
     /*
