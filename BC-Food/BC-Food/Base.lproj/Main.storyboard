@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -108,31 +108,49 @@
                                 <rect key="frame" x="211" y="177" width="85" height="33"/>
                                 <animations/>
                                 <state key="normal" title="The Rat"/>
+                                <connections>
+                                    <action selector="RatSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="yKH-Xw-amA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db5-o3-tfX">
                                 <rect key="frame" x="52" y="248" width="71" height="33"/>
                                 <animations/>
                                 <state key="normal" title="Hillside"/>
+                                <connections>
+                                    <action selector="HillsideSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="7wD-br-lH6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eE-LN-yIx">
                                 <rect key="frame" x="125" y="248" width="71" height="33"/>
                                 <animations/>
                                 <state key="normal" title="Lower"/>
+                                <connections>
+                                    <action selector="LowerSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="FLX-NF-oYx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-Rg-lJI">
                                 <rect key="frame" x="218" y="248" width="71" height="33"/>
                                 <animations/>
                                 <state key="normal" title="Addie's"/>
+                                <connections>
+                                    <action selector="AddieSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="lF1-RC-KzM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfR-ho-Cox">
                                 <rect key="frame" x="52" y="323" width="71" height="33"/>
                                 <animations/>
                                 <state key="normal" title="Stuart"/>
+                                <connections>
+                                    <action selector="StuartSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="OUn-Am-Uhw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOq-Zb-msP">
                                 <rect key="frame" x="125" y="323" width="71" height="33"/>
                                 <animations/>
                                 <state key="normal" title="Brighton"/>
+                                <connections>
+                                    <action selector="BrightonSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="4c2-kg-zx7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-R3-oOb">
                                 <rect key="frame" x="136" y="83" width="44" height="47"/>
