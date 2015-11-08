@@ -22,13 +22,13 @@ class FUDhomePage: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func MacSegue(sender: AnyObject) {
+    @IBAction func generalSegue(sender: AnyObject) {
         performSegueWithIdentifier("general", sender: nil)
         print("Mac general segue works!!")
         
     }
     
-    @IBAction func EagleSegue(sender: AnyObject) {
+    @IBAction func generalSegue(sender: AnyObject) {
         performSegueWithIdentifier("general", sender: nil)
         print("Eagle's general segue works!!")
     }

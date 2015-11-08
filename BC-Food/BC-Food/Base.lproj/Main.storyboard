@@ -84,14 +84,14 @@
                                 <rect key="frame" x="52" y="177" width="71" height="33"/>
                                 <state key="normal" title="Mac"/>
                                 <connections>
-                                    <action selector="MacSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="TcU-wx-uIC"/>
+                                    <action selector="generalSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="Byd-Hq-GL1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-uD-ro5">
                                 <rect key="frame" x="118" y="177" width="85" height="33"/>
                                 <state key="normal" title="Eagle's Nest"/>
                                 <connections>
-                                    <action selector="EagleSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="VfG-fB-r3q"/>
+                                    <action selector="generalSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="JxQ-BD-h13"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-ge-xAA">
