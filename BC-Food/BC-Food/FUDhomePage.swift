@@ -30,12 +30,42 @@ class FUDhomePage: UIViewController {
     
     @IBAction func EagleSegue(sender: AnyObject) {
         performSegueWithIdentifier("general", sender: nil)
-        print("Eagle's general segue works!!")    }
+        print("Eagle's general segue works!!")
+    }
 
+    @IBAction func RatSegue(sender: AnyObject) {
+        performSegueWithIdentifier("general", sender: nil)
+        print("Rat's general segue works!!")
+    }
     
-   
                     
-        
+    @IBAction func HillsideSegue(sender: AnyObject) {
+        performSegueWithIdentifier("general", sender: nil)
+        print("Hillside's general segue works!!")
+    }
+    
+    
+    @IBAction func LowerSegue(sender: AnyObject) {
+        performSegueWithIdentifier("general", sender: nil)
+        print("Lower's general segue works!!")
+    }
+    
+    @IBAction func AddieSegue(sender: AnyObject) {
+        performSegueWithIdentifier("general", sender: nil)
+        print("Addie's general segue works!!")
+    }
+    
+    
+    @IBAction func StuartSegue(sender: AnyObject) {
+        performSegueWithIdentifier("general", sender: nil)
+        print("Stuart's general segue works!!")
+    }
+    
+    
+    @IBAction func BrightonSegue(sender: AnyObject) {
+        performSegueWithIdentifier("general", sender: nil)
+        print("Brighton's general segue works!!")
+    }
     
 
     /*
