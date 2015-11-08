@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -36,7 +36,7 @@
                                 <animations/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="CVH-NS-l4X" kind="show" id="65F-ln-yIL"/>
+                                    <segue destination="sOj-o6-Rjf" kind="show" identifier="login" id="mDa-z0-480"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-fn-0gi">
@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="377"/>
+            <point key="canvasLocation" x="3277" y="373"/>
         </scene>
         <!--Dhome Page-->
         <scene sceneID="GtJ-0h-avY">
@@ -85,45 +85,32 @@
                                 <rect key="frame" x="78" y="133" width="165" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rc-um-cnP">
                                 <rect key="frame" x="52" y="177" width="71" height="33"/>
+                                <animations/>
                                 <state key="normal" title="Mac"/>
                                 <connections>
-                                    <segue destination="Wyl-7V-ZFf" kind="show" id="8it-jB-Knc"/>
+                                    <action selector="MacSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="TcU-wx-uIC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-80-Es3">
-                                <rect key="frame" x="201" y="180" width="42" height="30"/>
-                                <state key="normal" title="Lower"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-uD-ro5">
+                                <rect key="frame" x="118" y="177" width="85" height="33"/>
+                                <animations/>
+                                <state key="normal" title="Eagle's Nest"/>
+                                <connections>
+                                    <action selector="EagleSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="VfG-fB-r3q"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUR-jG-Ncz">
-                                <rect key="frame" x="46" y="243" width="82" height="30"/>
-                                <state key="normal" title="Eagles Nest"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-R3-oOb">
-                                <rect key="frame" x="136" y="47" width="98" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-rE-xUn">
-                                <rect key="frame" x="195" y="243" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-ge-xAA">
+                                <rect key="frame" x="211" y="177" width="85" height="33"/>
+                                <animations/>
                                 <state key="normal" title="The Rat"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-qM-rJX">
-                                <rect key="frame" x="62" y="308" width="50" height="30"/>
-                                <state key="normal" title="Hillside"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vet-tM-I63">
-                                <rect key="frame" x="190" y="308" width="64" height="30"/>
-                                <state key="normal" title="Choc Bar"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFT-mZ-Kvq">
-                                <rect key="frame" x="66" y="373" width="43" height="30"/>
-                                <state key="normal" title="Stuart"/>
+                                <connections>
+                                    <action selector="RatSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="yKH-Xw-amA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db5-o3-tfX">
                                 <rect key="frame" x="52" y="248" width="71" height="33"/>
@@ -184,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxI-K5-GBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="377"/>
+            <point key="canvasLocation" x="4516" y="387"/>
         </scene>
         <!--Ddining Hall Home-->
         <scene sceneID="nrp-GY-gQu">
@@ -209,30 +196,30 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SIk-ev-KWg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n7-nF-aUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="377"/>
+            <point key="canvasLocation" x="4965" y="387"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RdG-nm-Oue">
+        <scene sceneID="tw0-3V-NiC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wyl-7V-ZFf" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sOj-o6-Rjf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X4H-5k-2As">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZ0-tn-vaB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CV4-k9-W3v" kind="relationship" relationship="rootViewController" id="pzr-Uk-N31"/>
+                        <segue destination="CVH-NS-l4X" kind="relationship" relationship="rootViewController" id="cx4-gV-73y"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fac-S7-9nL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsg-bX-lFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="377"/>
+            <point key="canvasLocation" x="3832" y="63"/>
         </scene>
     </scenes>
 </document>
