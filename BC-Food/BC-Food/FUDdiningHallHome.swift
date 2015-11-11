@@ -10,16 +10,30 @@ import UIKit
 
 class FUDdiningHallHome: UIViewController {
     
-    var incomingText = "temp"
+    
+    @IBOutlet weak var SegmentView: UISegmentedControl!
+    
+    @IBOutlet weak var Label: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var textArray: NSMutableArray! = NSMutableArray()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("it works")
-        print(self.incomingText)
+        
+        self.textArray.addObject("Burritos")
+        
+        self.textArray.addObject("Hamburgers")
+        
+        self.textArray.addObject("Quesadillas")
+        
+        self.textArray.addObject("Salads")
+        
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,15 +41,23 @@ class FUDdiningHallHome: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    @IBAction func SwitchMenu(sender: AnyObject) {
+        
+        if SegmentView.selectedSegmentIndex == 0 {
+            Label.text = "Breakfast" }
+       
+        if SegmentView.selectedSegmentIndex == 1 {
+            Label.text = "Lunch" }
+        
+        if SegmentView.selectedSegmentIndex == 2 {
+            Label.text = "Dinner" }
+        
+        if SegmentView.selectedSegmentIndex == 3 {
+            Label.text = "Late Night" }
+        
+        }
+    
+    
 
 }
