@@ -8,39 +8,67 @@
 
 import UIKit
 
-class FUDdiningHallHome: UIViewController {
+class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
+    
+    var textArray = ["list"]
+    
+    @IBOutlet weak var tableView: UITableViewCell!
     
     @IBOutlet weak var SegmentView: UISegmentedControl!
     
     @IBOutlet weak var Label: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    var textArray: NSMutableArray! = NSMutableArray()
-    
 
     override func viewDidLoad() {
+        print("viewDidLoad")
         super.viewDidLoad()
         
         
-        self.textArray.addObject("Burritos")
         
-        self.textArray.addObject("Hamburgers")
         
-        self.textArray.addObject("Quesadillas")
+        self.textArray.append("burrito")
         
-        self.textArray.addObject("Salads")
+        self.textArray.append("quesadilla")
         
-
+        self.textArray.append("hamburger")
+        
+        self.textArray.append("taco")
+    
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print("didReceiveMemory works")
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        print("created number of sections")
+        return 6
+        
+    
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("created number of rows")
+        return textArray.count
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        print("configured individual cells")
+        return cell
+        
+        
+    }
+    
+    
+    
+    
+   // this is the function for switching between segmented views
     
     @IBAction func SwitchMenu(sender: AnyObject) {
         
