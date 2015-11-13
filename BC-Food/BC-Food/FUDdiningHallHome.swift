@@ -13,7 +13,10 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
     
     var textArray = ["list"]
     
-    @IBOutlet weak var tableView: UITableViewCell!
+    
+    
+    @IBOutlet weak var DiningTable: UITableView!
+ 
     
     @IBOutlet weak var SegmentView: UISegmentedControl!
     
@@ -24,7 +27,10 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         print("viewDidLoad")
         super.viewDidLoad()
         
-        
+        self.DiningTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+       
+        DiningTable.delegate = self
+        DiningTable.dataSource = self
         
         
         self.textArray.append("burrito")
@@ -44,36 +50,31 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        print("created number of sections")
-        return 6
-        
-    
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("created number of rows")
-        return textArray.count
-        
+        return 6
     }
-    
+        
+        
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        print("configured individual cells")
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        
+        if indexPath.row==0{
+            cell.backgroundColor = UIColor.orangeColor()
+        }
+        
+        cell.textLabel!.text = "It works!"
         return cell
-        
-        
     }
     
     
     
     
-   // this is the function for switching between segmented views
+    // this is the function for switching between segmented views
     
     @IBAction func SwitchMenu(sender: AnyObject) {
         
         if SegmentView.selectedSegmentIndex == 0 {
-            Label.text = "Breakfast" }
+           Label.text = "Breakfast" }
        
         if SegmentView.selectedSegmentIndex == 1 {
             Label.text = "Lunch" }

@@ -227,8 +227,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="CV4-k9-W3v" id="Vxd-BS-mp7"/>
-                                    <outlet property="delegate" destination="CV4-k9-W3v" id="y1b-7T-b10"/>
+                                    <outlet property="dataSource" destination="CV4-k9-W3v" id="kdm-aC-dwz"/>
+                                    <outlet property="delegate" destination="CV4-k9-W3v" id="Kt7-6K-QX0"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -237,9 +237,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="DiningTable" destination="blJ-8q-jZK" id="ggZ-Bh-ruP"/>
                         <outlet property="Label" destination="7uv-mw-0dE" id="7du-wX-Oja"/>
                         <outlet property="SegmentView" destination="gg9-XR-uw0" id="IqW-GG-rrr"/>
-                        <outlet property="tableView" destination="h1L-1T-Qvn" id="efE-Cf-NFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n7-nF-aUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
