@@ -11,7 +11,7 @@ import UIKit
 class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     
-    var textArray = ["list"]
+    var textArray = [""]
     
     
     
@@ -50,19 +50,34 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         // Dispose of any resources that can be recreated.
     }
     
+    // this function sets the number of rows in each section
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
         
-        
+    
+    //this function configures settings for each cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
         if indexPath.row==0{
             cell.backgroundColor = UIColor.orangeColor()
+            cell.textLabel!.text = textArray[indexPath.row]
         }
         
-        cell.textLabel!.text = "It works!"
+        
+        if indexPath.row==1{
+            cell.backgroundColor = UIColor.purpleColor()
+            cell.textLabel!.text = textArray[indexPath.row]
+        }
+        
+        
+        if indexPath.row==2{
+            cell.backgroundColor = UIColor.blueColor()
+            cell.textLabel!.text = textArray[indexPath.row]
+        }
+        
         return cell
     }
     
