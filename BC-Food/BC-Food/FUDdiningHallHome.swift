@@ -11,9 +11,9 @@ import UIKit
 class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     
-    var textArray = [""]
+    var textArray = [["burrito", "quesadilla", "hamburger"], ["taco", "tomato", "lettuce", "carrot"], ["General Zao's food"],["Cheese Pizza"]]
     
-    
+    var FoodTypes = ["Hot off the Press", "Deli", "Soups", "Chinese"]
     
     @IBOutlet weak var DiningTable: UITableView!
  
@@ -33,51 +33,52 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         DiningTable.dataSource = self
         
         
-        self.textArray.append("burrito")
+        print("textArray", textArray.count)
         
-        self.textArray.append("quesadilla")
-        
-        self.textArray.append("hamburger")
-        
-        self.textArray.append("taco")
-    
+        print("SectionNumber", FoodTypes.count)
         
     }
+    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         print("didReceiveMemory works")
         // Dispose of any resources that can be recreated.
     }
+    // This code deals with the section number and title
+    
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        print("\(FoodTypes.count) sections created")
+        return self.FoodTypes.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section < FoodTypes.count{
+            print("Section title = \(FoodTypes[section])")
+            return FoodTypes[section]
+        }
+        
+        return nil
+    }
+    
     
     // this function sets the number of rows in each section
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        print("\(textArray[section]) section created")
+        return self.textArray[section].count
     }
-        
+    
     
     //this function configures settings for each cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
-        if indexPath.row==0{
-            cell.backgroundColor = UIColor.orangeColor()
-            cell.textLabel!.text = textArray[indexPath.row]
-        }
-        
-        
-        if indexPath.row==1{
-            cell.backgroundColor = UIColor.purpleColor()
-            cell.textLabel!.text = textArray[indexPath.row]
-        }
-        
-        
-        if indexPath.row==2{
-            cell.backgroundColor = UIColor.blueColor()
-            cell.textLabel!.text = textArray[indexPath.row]
-        }
-        
+        cell.backgroundColor = UIColor.blueColor()
+        cell.textLabel!.text = self.textArray[indexPath.section][indexPath.row]
         return cell
     }
     
@@ -100,7 +101,7 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         if SegmentView.selectedSegmentIndex == 3 {
             Label.text = "Late Night" }
         
-        }
+    }
     
     
 
