@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sOj-o6-Rjf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -36,9 +36,6 @@
                                 <animations/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                                 <state key="normal" title="Submit"/>
-                                <connections>
-                                    <segue destination="sOj-o6-Rjf" kind="show" identifier="login" id="mDa-z0-480"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-fn-0gi">
                                 <rect key="frame" x="77" y="199" width="166" height="30"/>
@@ -61,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3277" y="373"/>
+            <point key="canvasLocation" x="3199" y="450"/>
         </scene>
         <!--Dhome Page-->
         <scene sceneID="GtJ-0h-avY">
@@ -94,7 +91,7 @@
                                 <animations/>
                                 <state key="normal" title="Mac"/>
                                 <connections>
-                                    <action selector="MacSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="TcU-wx-uIC"/>
+                                    <action selector="MacSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="cbt-9V-wpr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-uD-ro5">
@@ -145,6 +142,13 @@
                                     <action selector="StuartSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="OUn-Am-Uhw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-R3-oOb">
+                                <rect key="frame" x="138" y="78" width="44" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOq-Zb-msP">
                                 <rect key="frame" x="125" y="323" width="71" height="33"/>
                                 <animations/>
@@ -153,20 +157,21 @@
                                     <action selector="BrightonSegue:" destination="CVH-NS-l4X" eventType="touchUpInside" id="4c2-kg-zx7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-R3-oOb">
-                                <rect key="frame" x="136" y="83" width="44" height="47"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.43280174525035975" blue="0.32051743081165529" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="F5V-oI-VEq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="AddieButton" destination="zmE-Rg-lJI" id="1TD-XD-aVE"/>
+                        <outlet property="BrightonButton" destination="jOq-Zb-msP" id="f0y-Rd-YCc"/>
+                        <outlet property="EagleButton" destination="OA9-uD-ro5" id="vju-nL-DTf"/>
+                        <outlet property="HillsideButton" destination="db5-o3-tfX" id="ySx-mx-veg"/>
+                        <outlet property="LowerButton" destination="0eE-LN-yIx" id="adw-ji-yah"/>
+                        <outlet property="MacButton" destination="2Rc-um-cnP" id="Una-vD-4JQ"/>
+                        <outlet property="RatButton" destination="CPY-ge-xAA" id="pOh-d9-EXh"/>
+                        <outlet property="StuartButton" destination="hfR-ho-Cox" id="EGz-8b-0NE"/>
                         <segue destination="CV4-k9-W3v" kind="show" identifier="general" id="rFF-Mw-gxM"/>
                     </connections>
                 </viewController>
@@ -186,25 +191,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uv-mw-0dE">
-                                <rect key="frame" x="131" y="62" width="149" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uv-mw-0dE">
+                                <rect key="frame" x="0.0" y="64" width="320" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.85745015006881165" blue="0.60858676308410142" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-8q-jZK">
-                                <rect key="frame" x="0.0" y="133" width="320" height="284"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-XR-uw0">
+                                <rect key="frame" x="0.0" y="525" width="320" height="29"/>
+                                <segments>
+                                    <segment title="Breakfast"/>
+                                    <segment title="Lunch"/>
+                                    <segment title="Dinner"/>
+                                    <segment title="Late Night"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SwitchMenu:" destination="CV4-k9-W3v" eventType="valueChanged" id="DKf-jW-PZr"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-8q-jZK">
+                                <rect key="frame" x="0.0" y="107" width="320" height="391"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="O7I-1O-8a3" style="IBUITableViewCellStyleDefault" id="h1L-1T-Qvn">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="O7I-1O-8a3" rowHeight="46" style="IBUITableViewCellStyleDefault" id="h1L-1T-Qvn">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h1L-1T-Qvn" id="8Ez-wD-htW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O7I-1O-8a3">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,18 +237,6 @@
                                     <outlet property="delegate" destination="CV4-k9-W3v" id="Kt7-6K-QX0"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-XR-uw0">
-                                <rect key="frame" x="0.0" y="430" width="320" height="29"/>
-                                <segments>
-                                    <segment title="Breakfast"/>
-                                    <segment title="Lunch"/>
-                                    <segment title="Dinner"/>
-                                    <segment title="Late Night"/>
-                                </segments>
-                                <connections>
-                                    <action selector="SwitchMenu:" destination="CV4-k9-W3v" eventType="valueChanged" id="DKf-jW-PZr"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
