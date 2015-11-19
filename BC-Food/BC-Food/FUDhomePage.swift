@@ -68,6 +68,11 @@ class FUDhomePage: UIViewController {
         print("Brighton's general segue works!!")
     }
 
+    func buttonPressed(){
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

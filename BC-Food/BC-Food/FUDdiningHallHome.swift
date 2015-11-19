@@ -18,7 +18,7 @@ class FUDdiningHallHome: UIViewController {
         
         print("it works")
         print(self.incomingText)
-
+    
         // Do any additional setup after loading the view.
     }
 
@@ -26,6 +26,7 @@ class FUDdiningHallHome: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
