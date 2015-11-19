@@ -31,7 +31,6 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         print("viewDidLoad")
         super.viewDidLoad()
         
-        self.FUDdiningHallHome.backgroundColor = UIColor(red: 128, green: 0, blue: 0)
         
         self.Label.text = self.TitleOfMenu
         
@@ -45,6 +44,8 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
         
         print("textArray", textArray.count)
         print("SectionNumber", FoodTypes.count)
+        
+        
         
         // this is where I set the incoming dining hall name to the actual dining hall array that contains the food items for each dining hall
         
@@ -100,9 +101,9 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     
-    // this is the function for switching between segmented views
+    // this is the function for switching between segmented views (breakfast, lunch, dinner, late night). It refills the displayed table data based by drawing from different elements of the food arrays.
     
-    @IBAction func SwitchMenu(sender: AnyObject) {
+    @IBAction func SwitchMealTime(sender: AnyObject) {
         
         if SegmentView.selectedSegmentIndex == 0 {
            Label.text = "Breakfast" }
