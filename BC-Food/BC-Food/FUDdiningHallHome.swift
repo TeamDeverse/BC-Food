@@ -14,6 +14,10 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
     
     var DiningPlace = "Which menu am I looking at?"
     
+    var breakfastFoods: [String]=[]
+    var lunchFoods: [String]=[]
+    var dinnerFoods: [String]=[]
+    var latenightFoods: [String]=[]
     
     
     var foodList: [String]=[]
@@ -56,15 +60,6 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
        
         DiningTable.delegate = self
         DiningTable.dataSource = self
-        
-        
-        
-        // this is where I set the incoming dining hall name to the actual dining hall array that contains the food items for each dining hall
-        
-        if self.DiningPlace == "Mac" {
-//            var textArray = MacFoods[0][0]
-            print("MacFoods")
-        }
         
         
     }
@@ -124,16 +119,27 @@ class FUDdiningHallHome: UIViewController, UITableViewDataSource, UITableViewDel
     @IBAction func SwitchMealTime(sender: AnyObject) {
         
         if SegmentView.selectedSegmentIndex == 0 {
-           Label.text = "Breakfast" }
+           self.foodList = self.breakfastFoods
+            self.DiningTable.reloadData()
+ 
+        }
        
         if SegmentView.selectedSegmentIndex == 1 {
-            Label.text = "Lunch" }
+            self.foodList = self.lunchFoods
+            self.DiningTable.reloadData()
+        }
         
         if SegmentView.selectedSegmentIndex == 2 {
-            Label.text = "Dinner" }
+            self.foodList = self.dinnerFoods
+            self.DiningTable.reloadData()
+        }
         
         if SegmentView.selectedSegmentIndex == 3 {
-            Label.text = "Late Night" }
+            self.foodList = self.latenightFoods
+            self.DiningTable.reloadData()
+        }
+        
+        
         
     }
     

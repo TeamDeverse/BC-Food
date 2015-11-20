@@ -10,11 +10,17 @@ import UIKit
 
 class FUDhomePage: UIViewController {
     
+    var breakfastItems: [String]=[]
+    var lunchItems: [String]=[]
+    var dinnerItems: [String]=[]
+    var latenightItems: [String]=[]
+    
     var url = NSURL(string:"")
     
-    var foodSections:[String]=[] //textArray = ["item"]
+    var foodSections:[String]=[]
     
-    var foodItems :[String]=[] //: [String]=[]//foodItems = ["Food Type 1", "Food Type 2", "Food Type 3", "Food Type 4"]
+    //food item no longer stores anything, but DO NOT delete it. the code still needs it
+    var foodItems :[String]=[]
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -111,7 +117,11 @@ class FUDhomePage: UIViewController {
                 print("accessing third screen from second")
                 nextVC.DiningPlace = DiningName
                 nextVC.TitleOfMenu = DiningName
-                nextVC.foodList = foodItems 
+                nextVC.foodList = breakfastItems
+                nextVC.breakfastFoods = breakfastItems
+                nextVC.lunchFoods = lunchItems
+                nextVC.dinnerFoods = dinnerItems
+                nextVC.latenightFoods = latenightItems 
                 
             }
             
@@ -192,11 +202,11 @@ class FUDhomePage: UIViewController {
             let temp = sep.componentsSeparatedByString("</div>")
             menuTitles.append(temp[0])
         }
-        
-        for title in menuTitles{
-            print(title)
-        }
-        print("---------end of menus---------")
+//        
+//        for title in menuTitles{
+//            print(title)
+//        }
+//        print("---------end of menus---------")
         
         //--------------------------PULLING SECTIONS-------------------------------
         
@@ -209,33 +219,56 @@ class FUDhomePage: UIViewController {
                 let temp = sec.componentsSeparatedByString("--<")
                 self.foodSections.append(temp[0])
             }
-            self.foodSections.removeAtIndex(0)
         }
-        
-        for sec in self.foodSections{
-            print(sec)
-        }
-        print("---------end of sections---------")
+//        
+//        for sec in self.foodSections{
+//            print(sec)
+//        }
+//        print("---------end of sections---------")
         
         //-----------------------PULLING FOOD ITEMS------------------------------------
         
+        var countSplit: Int = 0
         for sections in temporary{
             
             var splitFoods = sections.componentsSeparatedByString("#000000'>")
             splitFoods.removeAtIndex(0)
-            splitFoods.insert("new", atIndex: 0)
+            countSplit++
+            let countString = String(countSplit)
+            splitFoods.insert(countString, atIndex: 0)
             for food in splitFoods{
                 let temp = food.componentsSeparatedByString("&nbsp")
-                self.foodItems.append(temp[0])
+                //self.foodItems.append(temp[0])
+                
+                if countSplit == 1{
+                    breakfastItems.append(temp[0])
+                }
+                
+                if countSplit == 2{
+                    lunchItems.append(temp[0])
+                }
+                
+                if countSplit == 3{
+                    dinnerItems.append(temp[0])
+                }
+                
+                if countSplit == 4{
+                    latenightItems.append(temp[0])
+                }
+                
             }
-            foodItems.removeAtIndex(0)
         }
         
-        for food in foodItems{
-            print(food)
-        }
-        print(foodItems.count)
-        print("---------end of food items---------")
+        breakfastItems.removeAtIndex(0)
+        lunchItems.removeAtIndex(0)
+        dinnerItems.removeAtIndex(0)
+        latenightItems.removeAtIndex(0)
+        
+//        for food in lunchItems{
+//            print(food)
+//            
+//        }
+//        print("---------end of food items---------")
         
     }
 
