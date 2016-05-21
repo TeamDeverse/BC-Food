@@ -1,0 +1,46 @@
+{
+	"Eangle's Nest":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=23%28a%29&locationName=Eagle%27s+Nest&naFlag=1"
+	},
+	"Hillside Cafe":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=02&locationName=Hillside+Cafe&naFlag=1"
+	},
+	"The Loft":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=21%28a%29&locationName=The+Loft&naFlag=1"
+	},
+	"Stuart Hall":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=28&locationName=Stuart+Hall&naFlag=1"
+	},
+	"Faculty Dining Room":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/location.asp"
+	},
+	"Cafe 129":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/cafe129.html"
+	},
+	"The Bean Counter":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/beancounter.html"
+	},
+	"The Chocolate Bar":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/chocolate.html"
+	},
+	"Carney's":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=23&locationName=Carney%27s&naFlag=1"
+	},
+	"Lower Live":{
+		"open":true,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=21&locationName=Lower+Live&naFlag=1"
+	},
+	"Lyons Hall":{
+		"open":false,
+		"website":"http://foodpro.bc.edu/foodpro/shortmenu.asp?sName=BC+DINING&locationNum=25&locationName=Lyons+Hall&naFlag=1"
+	}
+}
