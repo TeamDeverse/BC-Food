@@ -9,18 +9,57 @@
 import UIKit
 
 class FUDhomePage: UIViewController {
+    
+    var API_base = "https://raw.githubusercontent.com/TeamDeverse/BC-Food/master/API/"
 
     override func viewDidLoad(){
         super.viewDidLoad()
-        print("here")
 
-        // Do any additional setup after loading the view.
+        // run the UI call. Later, should turn into an asynchronous call
+        // or otherwise have a local hard-coded list of the dining halls at minimum
+        getDiningHalls()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func getDiningHalls(){
+        let json_data = NSData(contentsOfURL: NSURL(string: API_base+"bcdining%3Fdining_halls")!)!
+        let json_dict = getJSON_dict(json_data)
+        if json_dict != [:]{
+            //print(json_dict)
+            // print the keys of the dictionary, ie the actual dining halls
+            // each dining hall technically has further information attached
+            // currently whether it is open, and the website url
+            print("List of dining halls")
+            print(json_dict.allKeys)
+            
+        }
+        else{
+            print("There was an error, can't load")
+            let alertView = UIAlertView(title: "Error", message: "Could not load dining halls", delegate: self, cancelButtonTitle: "Okay") //, otherButtonTitles: "No"
+            alertView.tag = 1
+            alertView.show()
+            
+        }
+    }
+    
+    func getJSON_dict(json_data: NSData) -> NSDictionary {
+        do {
+            if let jsonResult = try NSJSONSerialization.JSONObjectWithData(json_data, options: []) as? NSDictionary {
+                return jsonResult
+                //let k = jsonResult.allKeys
+                //print(k)
+            }
+        } catch {
+            print(error)
+        }
+        return [:]
+    }
+    
     
     var DiningName = "test"
     
